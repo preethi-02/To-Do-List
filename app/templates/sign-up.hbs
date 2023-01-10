@@ -1,0 +1,53 @@
+<NavBar @isLoginPage="true"/>
+<div>
+  <div class="sign-up">
+    <h1 class="text-center">Sign up</h1>
+    <form {{action "submitform" on="submit"}}>
+      <div class="mb-3">
+        <label class="form-label">First name</label>
+        {{input type="text" value=firstname class="form-control" required=true}}
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Last name</label>
+        {{input type="text" value=lastname class="form-control" required=true}}
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Date of birth</label>
+        {{input type="date" value=dob class="form-control" required=true}}
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Phone number</label>
+        {{input type="tel" value=phoneno class="form-control" required=true}}
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Email</label>
+        {{input type="email" value=email class="form-control" required=true}}
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Password</label>
+        {{input type="password" value=password class="form-control" required=true}}
+      </div>
+      <div class="mb-3">
+        <label  class="form-label">Confirm Password</label>
+        {{input type="password" value=confirmpassword class="form-control" required=true}}
+      </div>
+      <div class="mb-3">
+        {{input type="checkbox" class="form-check-input" required=true}}
+        <label class="form-check-label">I Agree all the details are correct</label>  
+      </div>
+      <div class="mb-3 text-center">
+        <button type="submit" class="btn btn-primary" id="signup">
+          Sign Up
+        </button>
+      </div>
+      <div class="mb-3">
+        Already have an account?
+        <LinkTo @route="sign-in">Login</LinkTo>
+      </div>
+    </form>
+  </div>
+
+      
+</div>
+
+

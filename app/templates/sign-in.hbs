@@ -1,0 +1,23 @@
+<NavBar @isLoginPage="true"/>
+<div>
+  <div class="form-center">
+    <h1 class="text-center">Login</h1>
+    <form {{action "login" on="submit"}} >
+      <div class="mb-3">
+        <label class="form-label">Email</label>
+        {{input value=email type="email" class="form-control" required=true}}
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Password</label>
+        {{input value=password type="password" class="form-control" required=true}}
+      </div>
+      <div class="mb-3 text-center">
+        <button class="btn btn-primary" type="submit">Login</button>
+      </div>
+    </form>
+    <div class="mb-3 text0-center">
+      Don't have an account?
+      <LinkTo @route="sign-up" class="text-decoration-underline">Sign Up</LinkTo>
+    </div>       
+  </div>
+</div>
