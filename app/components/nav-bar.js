@@ -3,7 +3,7 @@ import {inject} from '@ember/service'
 
 export default Component.extend({
     tagName:'nav',
-    classNames:['navbar','bg-primary','text-white','mb-3'],
+    classNames:['navbar','bg-secondary','text-white','mb-3'],
     router:inject(),
     actions:{
         logout(){
