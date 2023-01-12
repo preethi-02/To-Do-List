@@ -9,7 +9,6 @@ export default Controller.extend({
             if(email.includes('@',1)&& email.endsWith(".com")){
                 let index=email.indexOf('@');
                 if(email[index+1]!=='.'){
-                    console.log(true);
                     this.set('isValidEmail',true);
                 }
                 else{

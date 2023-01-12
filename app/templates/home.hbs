@@ -1,13 +1,13 @@
 <NavBar/>
 <div class="mb-3 d-flex justify-content-end">
-  <LinkTo @route="completed" class="p-3">Completed Tasks</LinkTo>
-  <LinkTo @route="pending" class="p-3">Pending Tasks</LinkTo>
+  <LinkTo data-test-completed @route="completed" class="p-3 ">Completed Tasks</LinkTo>
+  <LinkTo  data-test-pending @route="pending" class="p-3 ">Pending Tasks</LinkTo>
 </div>
  
 <div class="d-flex justify-content-center">
   <form class="mb-3"> 
-    {{input placeholder=" Add your task" type="text" id="input" class="m-3" required=true}}
-    <button type="submit" {{action "createToDo"}}class="btn btn-secondary">ADD</button>
+    {{input placeholder=" Add your task" type="text" id="input" class="m-3 data-test-add-task" required=true}}
+    <button data-test-createtodo type="submit" {{action "createToDo"}}class="btn btn-secondary">ADD</button>
   </form>
 </div>
 <div>
