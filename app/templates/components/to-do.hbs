@@ -6,7 +6,7 @@
         {{if item.isCompleted "Mark as undone" "Mark as done"}}
       </button>
       <img src="pencil.png" width="20" height="15" class="me-3" data-bs-toggle="modal" data-bs-target="#EditWindow" {{action 'edit' item.id}}>       <!---->
-      <img src="bin.png" width="18" height="15" class="me-3" {{action "deleteTask" item.id}}>
+      <img src="bin.png" width="18" height="15" class="me-3 data-test-delete-task" {{action "deleteTask" item.id}}>
     </div>
   </li>
 {{/each}}

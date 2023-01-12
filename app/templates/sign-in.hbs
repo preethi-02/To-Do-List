@@ -5,19 +5,19 @@
     <form {{action "login" on="submit"}} >
       <div class="mb-3">
         <label class="form-label">Email</label>
-        {{input value=email type="email" class="form-control" required=true}}
+        {{input value=email type="email" class="form-control data-test-email" required=true}}
       </div>
       <div class="mb-3">
         <label class="form-label">Password</label>
-        {{input value=password type="password" class="form-control" required=true}}
+        {{input value=password type="password" class="form-control data-test-password" required=true}}
       </div>
       <div class="mb-3 text-center">
-        <button class="btn btn-secondary" type="submit">Login</button>
+        <button data-test-login class="btn btn-secondary" type="submit">Login</button>
       </div>
     </form>
     <div class="mb-3 text0-center">
       Don't have an account?
-      <LinkTo @route="sign-up" class="text-decoration-underline">Sign Up</LinkTo>
+      <LinkTo data-test-signup-link @route="sign-up" class="text-decoration-underline">Sign Up</LinkTo>
     </div>       
   </div>
 </div>
